@@ -4,6 +4,7 @@ def show_header(message):
     print("Антонкин Антон | Группа Программирование |11|4110| GeekBrains\n")
     print(f"{message}\n")
 
+
 def get_number(message):
     while True:
         try:
@@ -11,12 +12,14 @@ def get_number(message):
         except:
             continue
 
+
 def get_digitssum(n):
     sum = 0
     while n > 0:
         sum += n % 10
-        n//=10
+        n //= 10
     return sum
+
 
 def end():
     import os
