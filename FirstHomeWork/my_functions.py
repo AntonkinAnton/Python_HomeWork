@@ -25,3 +25,19 @@ def end():
     import os
     print()
     os.system("pause")
+
+
+def is_equal_two_sides_sum(num):
+    n = num
+    count = 0
+
+    while n != 0:
+        n = int(n/10)
+        count += 1
+
+    second_half = int(num % (10**(int(count/2))))
+
+    for i in range(0, int((count+1)/2)):
+        num //= 10
+
+    return get_digitssum(second_half) == get_digitssum(num)
