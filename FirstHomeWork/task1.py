@@ -1,8 +1,12 @@
-import os
-os.system('cls||clear')
+# Задача 1: Найдите сумму цифр трехзначного числа.
+# 123 -> 6 (1 + 2 + 3)
 
-def header():
-    print("Антонкин Антон | Группа Программирование |11|4110| GeekBrains\n")
+import my_functions
 
-header()
-input()
+my_functions.show_header("Программа показывает сумму всех цифр в числе")
+
+number = my_functions.get_number("Введите число:")
+
+print(f"\nСумма цифр числа {number} -> {my_functions.get_digitssum(number)}")
+
+my_functions.end()
