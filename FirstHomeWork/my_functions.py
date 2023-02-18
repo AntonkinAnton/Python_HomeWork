@@ -15,9 +15,11 @@ def get_number(message):
 
 def get_digitssum(n):
     sum = 0
+
     while n > 0:
         sum += n % 10
         n //= 10
+
     return sum
 
 
@@ -41,3 +43,11 @@ def is_equal_two_sides_sum(num):
         num //= 10
 
     return get_digitssum(second_half) == get_digitssum(num)
+
+
+def drawing_chocolate(raw, col):
+    block = "▩ "
+    print("\nВаш шоколад:")
+
+    for i in range(0, raw):
+        print(block*col)
