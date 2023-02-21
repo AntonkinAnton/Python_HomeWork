@@ -16,7 +16,7 @@ my_functions.drawing_chocolate(raws, columns)
 
 piece = my_functions.get_number("\nВведите размер кусочка в дольках:")
 
-real = piece % raws == 0 or piece % columns == 0
+real = (piece % raws == 0 or piece % columns == 0) and raws * columns >= piece
 
 if real:
     print(f"\nКусок размером {piece} долек ВЗМОЖНО отломить по прямой линии")
