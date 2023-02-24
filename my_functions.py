@@ -51,3 +51,21 @@ def drawing_chocolate(raw, col):
 
     for i in range(0, raw):
         print(block*col)
+
+
+def make_random_list():
+    import random
+
+    list_size = get_number("Введите размер массива")
+
+    start_range = get_number(
+        "Введите диапазон чисел для заполнения массива. От:")
+
+    end_range = get_number("До:")
+
+    list = []
+
+    for i in range(0, list_size):
+        list.append(random.randint(start_range, end_range))
+
+    return list
