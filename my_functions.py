@@ -69,3 +69,14 @@ def make_random_list():
         list.append(random.randint(start_range, end_range))
 
     return list
+
+
+def fill_list_random(size, start_range, end_range):
+    import random
+
+    list = []
+
+    for i in range(0, size):
+        list.append(random.randint(start_range, end_range))
+
+    return list
