@@ -80,3 +80,21 @@ def fill_list_random(size, start_range, end_range):
         list.append(random.randint(start_range, end_range))
 
     return list
+
+
+def Degree_Recursion(a, b):
+
+    if b == 1:
+        return a
+    
+    if b == 0:
+        return 1
+    
+    return a * Degree_Recursion(a, b - 1)
+
+def Sum_Recursion(a, b):
+
+    if b == 0:
+        return a
+    
+    return Sum_Recursion(a, b - 1) + 1
