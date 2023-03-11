@@ -22,9 +22,7 @@ poem = [x for x in input("Введите стихотворение:\n").split()
 
 vowels_in_phrases = list(map(Count_vowels, poem)) 
 
-print(vowels_in_phrases)
-
 if len(list(filter(lambda x: x != vowels_in_phrases[0], vowels_in_phrases))) == 0: 
-    print("Парам пам-пам")
+    print("\nПарам пам-пам")
 else:
-    print("Пам парам")
+    print("\nПам парам")
