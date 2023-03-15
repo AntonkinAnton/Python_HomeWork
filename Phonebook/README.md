@@ -1,6 +1,8 @@
 # Телефонный Справочник 
 ***by AntonkinAnton***
 
+для скачивания архива с программой перейдите на страницу [релиза](https://github.com/AntonkinAnton/Python_HomeWork/releases/tag/studing), либо по прямой ссылке на скачивание -> [PhoneBook](https://github.com/AntonkinAnton/Python_HomeWork/releases/download/studing/Phonebook.v1.01.zip)
+
 ## Описание программы
 
 
