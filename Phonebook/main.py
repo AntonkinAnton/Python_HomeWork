@@ -13,28 +13,28 @@ while True:
 
     Header('Главное меню')
 
-    choice = Choose_option('Введите нужное действие: \n\
+    choice = input('Введите нужное действие: \n\
        \n 1 - Добавить в справочник \
         \n 2 - Показать весь справочник \
          \n 3 - Поиск и редактирование \
           \n 4 - Очистить справочник \
-           \n\n 0 - Выход \n', 0, 4)
+           \n\n 0 - Выход \n\n')
     
     match choice: 
         
-        case 1: 
+        case '1': 
             Add_entry()
 
-        case 2: 
+        case '2': 
             OutputAll()
 
-        case 3:           
+        case '3':           
             Search()
 
-        case 4:           
+        case '4':           
             Clear_base()
 
-        case 0: 
+        case '0': 
             print("\nДо скорой встречи!\n")
             system("pause")
             break
