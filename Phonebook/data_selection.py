@@ -16,21 +16,21 @@ def Select_data():
         
         num = Get_num('Введите последние цифры номера для поиска:\n')
         print()
-        
-        res = ''
+         
         place = 0
         found_list_index = []
 
-        for i in range(len(whole_list)):
+        for i in range(len(whole_list)):       #в самом низу есть вторая, менее оптимальная версия решения
             line = whole_list[i].strip('\n')
 
             for j in range (len(num)):
-                res += line[len(line)-1-j]  #еще вариант- сверяем последние символы числа и строки, если число сходится, 
-            if res[::-1] == num:            #то продолжаем цикл, если цикл сам завершается- else: print. 
-                place += 1                  #Если символы не сходятся- break
+                if line[len(line)-1-j] == num[len(num)-1-j]:
+                    continue
+                else: break
+            else:          
+                place += 1                  
                 print(f"{place}. {whole_list[i]}")
                 found_list_index.append(i)
-            res = ''
 
         if place == 0:
             print('Нет совпадений!\n')
@@ -47,3 +47,15 @@ def Select_data():
         
         Replace_delete(old_line, new_line)
 
+    # менее оптимальная версия сравнения числа с концом номера
+    # res = ''
+    # for i in range(len(whole_list)):
+    #     line = whole_list[i].strip('\n')
+
+    #     for j in range (len(num)):
+    #         res += line[len(line)-1-j]
+    #         if res[::-1] == num:            
+    #             place += 1                  
+    #             print(f"{place}. {whole_list[i]}")
+    #             found_list_index.append(i)
+    #         res = ''
