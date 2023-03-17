@@ -22,13 +22,23 @@ def Get_string(message):
             print('Поле не может быть пустым!')
         else:
             return get_string
+        
+def Get_num(message):
+    while True:
+        get_string = input(f"{message}")
+        try:
+            int(get_string)
+            return get_string
+        except:
+            print('Введены не цифры!\n')
+            continue
 
 def Add_entry():
     system('cls||clear') 
     Header('Добавить запись')
 
-    name = Get_string('\nВведите имя: ')
-    phone_number = Get_string('\nВведите номер телефона: ')
+    name = Get_string('\nВведите имя:\n')
+    phone_number = Get_string('\nВведите номер телефона:\n')
 
     with open('./base.txt', 'a', encoding='utf-8') as file:
         file.writelines(f'{name} : {phone_number}\n')
