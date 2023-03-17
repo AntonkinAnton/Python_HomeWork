@@ -25,9 +25,9 @@ def Select_data():
             line = whole_list[i].strip('\n')
 
             for j in range (len(num)):
-                res += line[len(line)-1-j]
-            if res[::-1] == num:
-                place += 1
+                res += line[len(line)-1-j]  #еще вариант- сверяем последние символы числа и строки, если число сходится, 
+            if res[::-1] == num:            #то продолжаем цикл, если цикл сам завершается- else: print. 
+                place += 1                  #Если символы не сходятся- break
                 print(f"{place}. {whole_list[i]}")
                 found_list_index.append(i)
             res = ''
